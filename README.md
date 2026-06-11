@@ -2,13 +2,13 @@
 
 MediaVault is a personal media tracking application developed in Python that allows users to manage and organize their books, movies, and TV series in a single watchlist.
 
-The project follows Object-Oriented Programming principles and includes a Streamlit frontend, a Flask API backend, SQLite database integration, automated tests, and distributable Python packages.
+The project follows Object-Oriented Programming principles and includes a Streamlit frontend, a Flask API backend, SQLite database integration, automated testing, and distributable Python packages.
 
 ---
 
-## Features
+# Features
 
-### Add Media Items
+## Add Media Items
 
 Users can add:
 
@@ -26,7 +26,7 @@ Each media item stores:
 * Creator information
 * Additional media-specific information
 
-### View Watchlist
+## View Watchlist
 
 Users can view their media collection grouped by:
 
@@ -34,21 +34,35 @@ Users can view their media collection grouped by:
 * Movies
 * Series
 
-### Update Existing Items
+## Update Existing Items
 
 Users can modify previously stored media entries.
 
-### Database Storage
+## Database Storage
 
 All media information is stored in an SQLite database.
 
-### REST API
+## REST API
 
 The Flask backend provides API endpoints that allow the Streamlit frontend to communicate with the database.
 
 ---
 
-## Technologies Used
+# Object-Oriented Programming Concepts
+
+The project demonstrates several Object-Oriented Programming principles:
+
+* Classes and Objects
+* Encapsulation
+* Inheritance
+* Polymorphism
+* Abstraction
+
+Media items are represented through specialized classes for Books, Movies, and Series, while service and database layers separate business logic from data storage.
+
+---
+
+# Technologies Used
 
 * Python 3
 * Streamlit
@@ -60,7 +74,7 @@ The Flask backend provides API endpoints that allow the Streamlit frontend to co
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```text
 MediaVault/
@@ -84,7 +98,7 @@ MediaVault/
 
 ---
 
-## Installation
+# Installation
 
 Clone the repository:
 
@@ -101,15 +115,15 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Application
+# Running the Application
 
-### Start the Flask Backend
+## Start the Flask Backend
 
 ```bash
 python api.py
 ```
 
-### Start the Streamlit Frontend
+## Start the Streamlit Frontend
 
 Open a second terminal and run:
 
@@ -117,11 +131,11 @@ Open a second terminal and run:
 streamlit run app.py
 ```
 
-The application will open automatically in your browser.
+The application will automatically open in your browser.
 
 ---
 
-## Running Tests
+# Running Tests
 
 Execute:
 
@@ -131,9 +145,25 @@ pytest
 
 ---
 
-## Distributable Packages
+# Documentation
 
-This project includes distributable packages generated using Python packaging standards.
+Additional project documentation is available in the `docs` folder:
+
+* `report.md`
+* `test_report.md`
+
+---
+
+# Distributable Packages
+
+The project is distributed using modern Python packaging standards through `pyproject.toml`.
+
+Generated distributable files:
+
+* `mediavault_monica-1.0.0.tar.gz` (source distribution)
+* `mediavault_monica-1.0.0-py3-none-any.whl` (wheel distribution)
+
+These files are located in the `dist/` folder and can be installed or distributed independently of the source code.
 
 Package configuration:
 
@@ -157,18 +187,12 @@ python -m build
 
 ---
 
-## Screenshots
+# Author
 
-Application screenshots can be found in the `screenshots` folder.
-
----
-
-## Author
-Monica Salas
+**Monica Salas**
 Computer Science, Leipzig Campus
-ID: 100005574
+Student ID: 100005574
 
 Programming Lab Final Project
 
 ---
-
