@@ -1,0 +1,10 @@
+streamlit
+flask
+requests
+
+[dev]
+pytest
+pytest-cov
+pylint
+mypy
+black

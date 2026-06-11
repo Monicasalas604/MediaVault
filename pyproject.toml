@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediavault-monica"
+version = "1.0.0"
+description = "Personal media tracking application for books, movies, and series"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "flask",
+    "requests"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pylint",
+    "mypy",
+    "black"
+]
+
+[tool.setuptools]
+py-modules = ["app", "api", "database", "models", "services"]
