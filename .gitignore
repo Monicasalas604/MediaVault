@@ -12,3 +12,6 @@ mediavault.db
 mediavault.log
 
 .venv/
+
+build/
+*.egg-info/
