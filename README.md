@@ -164,12 +164,6 @@ Application screenshots can be found in the `screenshots` folder.
 ---
 
 ## Author
-
-Mónica Salas
-
-Programming Lab – Summer Semester 2026
-
-## Author
 Monica Salas
 Computer Science, Leipzig Campus
 ID: 100005574
