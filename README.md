@@ -50,7 +50,7 @@ The Flask backend provides API endpoints that allow the Streamlit frontend to co
 
 # Object-Oriented Programming Concepts
 
-The project demonstrates several Object-Oriented Programming principles:
+The project demonstrates:
 
 * Classes and Objects
 * Encapsulation
@@ -107,7 +107,31 @@ git clone https://github.com/Monicasalas604/MediaVault.git
 cd MediaVault
 ```
 
-Install dependencies:
+---
+
+# Virtual Environment Setup
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment.
+
+### Windows Command Prompt
+
+```bash
+.venv\Scripts\activate
+```
+
+### Git Bash
+
+```bash
+source .venv/Scripts/activate
+```
+
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -163,21 +187,7 @@ Generated distributable files:
 * `mediavault_monica-1.0.0.tar.gz` (source distribution)
 * `mediavault_monica-1.0.0-py3-none-any.whl` (wheel distribution)
 
-These files are located in the `dist/` folder and can be installed or distributed independently of the source code.
-
-Package configuration:
-
-```text
-pyproject.toml
-```
-
-Generated package files:
-
-```text
-dist/
-├── mediavault_monica-1.0.0.tar.gz
-└── mediavault_monica-1.0.0-py3-none-any.whl
-```
+These files are located in the `dist/` folder.
 
 To rebuild the package:
 
@@ -194,5 +204,3 @@ Computer Science, Leipzig Campus
 Student ID: 100005574
 
 Programming Lab Final Project
-
----
