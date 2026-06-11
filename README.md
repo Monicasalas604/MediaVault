@@ -1,38 +1,97 @@
 # MediaVault
 
-A personal media tracking application written in Python that allows users to manage books, movies, and television series through a Streamlit interface connected to a Flask REST API and SQLite database.
+MediaVault is a personal media tracking application developed in Python that allows users to manage and organize their books, movies, and TV series in a single watchlist.
 
-## Features
-
-### Media Management
-
-* Add books
-* Add movies
-* Add series
-* View all saved media
-* Update media status
-* Update ratings
-* Delete media entries
-
-### Technical Features
-
-* Object-Oriented Programming
-* SQLite database persistence
-* Flask REST API
-* Streamlit graphical interface
-* Logging
-* Error handling
-* Automated testing with pytest
+The project follows Object-Oriented Programming principles and includes a Streamlit frontend, a Flask API backend, SQLite database integration, automated tests, and distributable Python packages.
 
 ---
 
-## Requirements
+## Features
 
-* Python 3.x
+### Add Media Items
+
+Users can add:
+
+* Books
+* Movies
+* TV Series
+
+Each media item stores:
+
+* Title
+* Genre
+* Status
+* Rating
+* Review
+* Creator information
+* Additional media-specific information
+
+### View Watchlist
+
+Users can view their media collection grouped by:
+
+* Books
+* Movies
+* Series
+
+### Update Existing Items
+
+Users can modify previously stored media entries.
+
+### Database Storage
+
+All media information is stored in an SQLite database.
+
+### REST API
+
+The Flask backend provides API endpoints that allow the Streamlit frontend to communicate with the database.
+
+---
+
+## Technologies Used
+
+* Python 3
 * Streamlit
 * Flask
+* SQLite
 * Requests
 * Pytest
+* Pylint
+
+---
+
+## Project Structure
+
+```text
+MediaVault/
+│
+├── app.py
+├── api.py
+├── database.py
+├── models.py
+├── services.py
+│
+├── tests/
+├── docs/
+├── screenshots/
+├── dist/
+│
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+└── .gitignore
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Monicasalas604/MediaVault.git
+cd MediaVault
+```
 
 Install dependencies:
 
@@ -42,137 +101,73 @@ pip install -r requirements.txt
 
 ---
 
-## How to Run
+## Running the Application
 
-### Start the Backend
+### Start the Flask Backend
 
 ```bash
 python api.py
 ```
 
-The API will run on:
+### Start the Streamlit Frontend
 
-```text
-http://127.0.0.1:5000
-```
-
-### Start the Frontend
-
-Open a second terminal:
+Open a second terminal and run:
 
 ```bash
 streamlit run app.py
 ```
 
----
-
-## Project Structure
-
-```text
-MediaVault
-│
-├── app.py
-├── api.py
-├── database.py
-├── models.py
-├── services.py
-│
-├── tests
-│   ├── test_models.py
-│   ├── test_services_database.py
-│   └── test_api.py
-│
-├── docs
-│   ├── report.md
-│   └── test_report.md
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
-
----
-
-## Key Classes
-
-| Class            | Responsibility                                     |
-| ---------------- | -------------------------------------------------- |
-| MediaItem        | Abstract base class for all media types            |
-| Book             | Represents books and stores author and pages       |
-| Movie            | Represents movies and stores director and duration |
-| Series           | Represents series and stores creator and seasons   |
-| DatabaseManager  | Handles all SQLite database operations             |
-| WatchlistManager | Handles business logic and media management        |
-
----
-
-## API Endpoints
-
-### GET
-
-```text
-/
-/health
-/media
-```
-
-### POST
-
-```text
-/books
-/movies
-/series
-```
-
-### PUT
-
-```text
-/media/<id>/status
-/media/<id>/rating
-```
-
-### DELETE
-
-```text
-/media/<id>
-```
+The application will open automatically in your browser.
 
 ---
 
 ## Running Tests
 
-Run all tests:
+Execute:
 
 ```bash
-python -m pytest
+pytest
 ```
-
-Run coverage:
-
-```bash
-python -m pytest --cov=.
-```
-
-The tests cover:
-
-* Media models
-* Rating validation
-* Database operations
-* Business logic
-* Flask API endpoints
 
 ---
 
-## Possible Future Improvements
+## Distributable Packages
 
-* Search media by title
-* Statistics dashboard
-* User accounts
-* Export watchlists to CSV
-* Media cover images
-* Genre filtering
-* Sorting by rating or status
+This project includes distributable packages generated using Python packaging standards.
 
+Package configuration:
+
+```text
+pyproject.toml
+```
+
+Generated package files:
+
+```text
+dist/
+├── mediavault_monica-1.0.0.tar.gz
+└── mediavault_monica-1.0.0-py3-none-any.whl
+```
+
+To rebuild the package:
+
+```bash
+python -m build
+```
+
+---
+
+## Screenshots
+
+Application screenshots can be found in the `screenshots` folder.
+
+---
+
+## Author
+
+Mónica Salas
+
+Programming Lab – Summer Semester 2026
 
 ## Author
 Monica Salas
