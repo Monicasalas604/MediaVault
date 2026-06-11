@@ -1,0 +1,14 @@
+.streamlit/secrets.toml
+
+__pycache__/
+*.pyc
+
+.pytest_cache/
+.mypy_cache/
+
+.coverage
+
+mediavault.db
+mediavault.log
+
+.venv/
