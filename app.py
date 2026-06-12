@@ -1,4 +1,4 @@
-#Frontend Streamlit app for MediaVault - Personal Watchlist Tracker
+# Frontend Streamlit app for MediaVault - Personal Watchlist Tracker
 
 import logging
 

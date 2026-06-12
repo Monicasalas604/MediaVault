@@ -14,7 +14,9 @@ class DatabaseManager:
 
     # create the table where the data is going to be stored when the manager is initialized
     def create_table(self) -> None:
-        with self.connect() as conn:  # creates connection to the database and ensures it is properly closed after the block is executed
+        with (
+            self.connect() as conn
+        ):  # creates connection to the database and ensures it is properly closed after the block is executed
             cursor = conn.cursor()
             # creation of the table columns with the data type
             cursor.execute("""
