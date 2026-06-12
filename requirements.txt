@@ -1,5 +1,5 @@
-streamlit
 flask
+streamlit
 requests
 pytest
 pytest-cov
