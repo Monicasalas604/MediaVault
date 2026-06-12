@@ -2,7 +2,7 @@
 
 MediaVault is a personal media tracking application developed in Python that allows users to manage and organize their books, movies, and TV series in a single watchlist.
 
-The project follows Object-Oriented Programming principles and includes a Streamlit frontend, a Flask API backend, SQLite database integration, automated testing, and distributable Python packages.
+The project follows Object-Oriented Programming principles and includes a Streamlit frontend, a Flask API backend, SQLite database integration, automated testing, static code analysis, and distributable Python packages.
 
 ---
 
@@ -26,6 +26,8 @@ Each media item stores:
 * Creator information
 * Additional media-specific information
 
+---
+
 ## View Watchlist
 
 Users can view their media collection grouped by:
@@ -34,23 +36,39 @@ Users can view their media collection grouped by:
 * Movies
 * Series
 
+---
+
 ## Update Existing Items
 
-Users can modify previously stored media entries.
+Users can modify previously stored media entries, including:
+
+* Status
+* Rating
+
+---
 
 ## Database Storage
 
 All media information is stored in an SQLite database.
 
+---
+
 ## REST API
 
 The Flask backend provides API endpoints that allow the Streamlit frontend to communicate with the database.
+
+Supported operations include:
+
+* Creating media items
+* Retrieving media items
+* Updating media information
+* Deleting media items
 
 ---
 
 # Object-Oriented Programming Concepts
 
-The project demonstrates:
+The project demonstrates the use of:
 
 * Classes and Objects
 * Encapsulation
@@ -71,6 +89,8 @@ Media items are represented through specialized classes for Books, Movies, and S
 * Requests
 * Pytest
 * Pylint
+* MyPy
+* Black
 
 ---
 
@@ -86,12 +106,14 @@ MediaVault/
 ├── services.py
 │
 ├── tests/
-├── docs/
-├── screenshots/
-├── dist/
+│   ├── test_api.py
+│   ├── test_models.py
+│   └── test_services_database.py
 │
 ├── README.md
 ├── requirements.txt
+├── report.md
+├── test_report.md
 ├── pyproject.toml
 └── .gitignore
 ```
@@ -100,7 +122,7 @@ MediaVault/
 
 # Installation
 
-Clone the repository:
+## Clone the Repository
 
 ```bash
 git clone https://github.com/Monicasalas604/MediaVault.git
@@ -109,7 +131,7 @@ cd MediaVault
 
 ---
 
-# Virtual Environment Setup
+## Virtual Environment Setup
 
 Create a virtual environment:
 
@@ -131,7 +153,9 @@ Activate the virtual environment.
 source .venv/Scripts/activate
 ```
 
-Install the required dependencies:
+---
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -143,9 +167,13 @@ pip install -r requirements.txt
 
 ## Start the Flask Backend
 
+Open a terminal and run:
+
 ```bash
 python api.py
 ```
+
+---
 
 ## Start the Streamlit Frontend
 
@@ -161,46 +189,109 @@ The application will automatically open in your browser.
 
 # Running Tests
 
-Execute:
+Execute all automated tests:
 
 ```bash
-pytest
+python -m pytest
+```
+
+The project includes:
+
+* API Tests
+* Model Tests
+* Database Tests
+
+A total of 26 automated tests verify the application's functionality.
+
+---
+
+# Code Quality
+
+The project uses several tools to improve code quality and maintainability.
+
+## Pytest
+
+Run automated tests:
+
+```bash
+python -m pytest
+```
+
+---
+
+## Pylint
+
+Run static code analysis:
+
+```bash
+python -m pylint api.py app.py database.py models.py services.py
+```
+
+---
+
+## MyPy
+
+Run type checking:
+
+```bash
+python -m mypy api.py database.py models.py services.py
+```
+
+---
+
+## Black
+
+Check code formatting:
+
+```bash
+python -m black --check .
+```
+
+Format code automatically:
+
+```bash
+python -m black .
 ```
 
 ---
 
 # Documentation
 
-Additional project documentation is available in the `docs` folder:
+Additional project documentation:
 
-* `report.md`
-* `test_report.md`
+* report.md
+* test_report.md
+
+These files describe the project implementation, testing process, and development decisions.
 
 ---
 
 # Distributable Packages
 
-The project is distributed using modern Python packaging standards through `pyproject.toml`.
+The project uses modern Python packaging standards through `pyproject.toml`.
 
-Generated distributable files:
-
-* `mediavault_monica-1.0.0.tar.gz` (source distribution)
-* `mediavault_monica-1.0.0-py3-none-any.whl` (wheel distribution)
-
-These files are located in the `dist/` folder.
-
-To rebuild the package:
+To build the package:
 
 ```bash
 python -m build
 ```
 
+Generated files are stored in the `dist/` directory:
+
+* Source Distribution (.tar.gz)
+* Wheel Distribution (.whl)
+
 ---
 
 # Author
 
-**Monica Salas**
-Computer Science, Leipzig Campus
+Monica Salas
+
+Computer Science Student
+
+SRH University Leipzig Campus
+
 Student ID: 100005574
 
 Programming Lab Final Project
+
